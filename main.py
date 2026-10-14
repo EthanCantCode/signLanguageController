@@ -10,5 +10,7 @@ import cv2
 #0 means system default camera 1,2,3... chooses different cameras
 cam1 = cv2.VideoCapture(0)
 
-width = int(cam1.get(cv2.CAP))
+#This will grab the default width and height
+width = int(cam1.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cam1.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
