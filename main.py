@@ -16,14 +16,14 @@ width = int(cam1.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cam1.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # Define the codec and create VideoWriter object
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (width, height))
+#fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+#out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (width, height))
 
 while True:
     ret, frame = cam1.read()
 
     # Write the frame to the output file
-    out.write(frame)
+    #out.write(frame)
 
     # Display the captured frame
     cv2.imshow('Camera', frame)
@@ -34,5 +34,5 @@ while True:
 
 # Release the capture and writer objects
 cam1.release()
-out.release()
+#out.release()
 cv2.destroyAllWindows()
