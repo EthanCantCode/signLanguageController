@@ -33,8 +33,8 @@ options = handOptions(
     result_callback = print_result
 
 )
-with HandLandmarker.create_from_options(options) as landmarker:
-    landmarker = handDetect.create_from_options(options)
+
+landmarker = handDetect.create_from_options(options)
 
 cam1 = cv2.VideoCapture(0)
 
